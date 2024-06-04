@@ -5,20 +5,20 @@
 class AwsSso < Formula
   desc ""
   homepage "https://github.com/louislef299/aws-sso"
-  version "1.2.5"
+  version "1.2.6"
 
   on_macos do
     on_intel do
-      url "https://github.com/louislef299/aws-sso/releases/download/v1.2.5/aws-sso_1.2.5_Darwin_x86_64.tar.gz"
-      sha256 "d4c1ba9c8af7fb82a48cd82ae177b63d6f51ae4ce652986adb8c87a84961867d"
+      url "https://github.com/louislef299/aws-sso/releases/download/v1.2.6/aws-sso_1.2.6_Darwin_x86_64.tar.gz"
+      sha256 "eeefe2d6c2f14c7a3505265eac6b357a5d7232968695a42568076107e042976a"
 
       def install
         bin.install "aws-sso"
       end
     end
     on_arm do
-      url "https://github.com/louislef299/aws-sso/releases/download/v1.2.5/aws-sso_1.2.5_Darwin_arm64.tar.gz"
-      sha256 "ab99357c6780b119d4833be56a237a256b2cd91a6fb32c709d77185239202b20"
+      url "https://github.com/louislef299/aws-sso/releases/download/v1.2.6/aws-sso_1.2.6_Darwin_arm64.tar.gz"
+      sha256 "afedd54d46f3a7804c364a14bf257d77a4be1c963b76d7a253f050a0278d6983"
 
       def install
         bin.install "aws-sso"
@@ -29,8 +29,8 @@ class AwsSso < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/louislef299/aws-sso/releases/download/v1.2.5/aws-sso_1.2.5_Linux_x86_64.tar.gz"
-        sha256 "728867e5323fb18323360d7ff9f1a986fac11c7726857e811e7c78809034bd77"
+        url "https://github.com/louislef299/aws-sso/releases/download/v1.2.6/aws-sso_1.2.6_Linux_x86_64.tar.gz"
+        sha256 "88d007cd26a04237db26f6f922e2beda341b74e9b0df87fd0bc6cbd9bb2af4b0"
 
         def install
           bin.install "aws-sso"
@@ -39,8 +39,8 @@ class AwsSso < Formula
     end
     on_arm do
       if !Hardware::CPU.is_64_bit?
-        url "https://github.com/louislef299/aws-sso/releases/download/v1.2.5/aws-sso_1.2.5_Linux_arm.tar.gz"
-        sha256 "1945e00c19d99da42023f57bcf3c7baee2b3a149a944bfa655dd6ae6b48a2a48"
+        url "https://github.com/louislef299/aws-sso/releases/download/v1.2.6/aws-sso_1.2.6_Linux_arm.tar.gz"
+        sha256 "bdc2fba4225a59d660ef4d235c684c6e515f33b3736d6c445b86afea8cea1332"
 
         def install
           bin.install "aws-sso"
@@ -49,8 +49,8 @@ class AwsSso < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/louislef299/aws-sso/releases/download/v1.2.5/aws-sso_1.2.5_Linux_arm64.tar.gz"
-        sha256 "d29a010a6ad840817d007d8c839d6604651fdc6773d3e45ab37aeb8169904d22"
+        url "https://github.com/louislef299/aws-sso/releases/download/v1.2.6/aws-sso_1.2.6_Linux_arm64.tar.gz"
+        sha256 "055d31a267146543f79926c15feb159c85036cfd1ec581812fe9f0b06f0f4173"
 
         def install
           bin.install "aws-sso"
