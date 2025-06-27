@@ -2,7 +2,7 @@
 cask "aws-sso" do
   desc ""
   homepage "https://github.com/louislef299/aws-sso"
-  version "1.5.1"
+  version "1.5.4"
 
   livecheck do
     skip "Auto-generated on release."
@@ -12,23 +12,29 @@ cask "aws-sso" do
 
   on_macos do
     on_intel do
-      url "https://github.com/louislef299/aws-sso/releases/download/v1.5.1/aws-sso_1.5.1_Darwin_x86_64.tar.gz"
-      sha256 "6f2602781f2a1a52ad06f330ac505775565ed3d5c9f1206cc488e73eca375818"
+      url "https://github.com/louislef299/aws-sso/releases/download/v1.5.4/aws-sso_1.5.4_Darwin_x86_64.tar.gz"
+      sha256 "9b0fee891d2a9f27cb9d9855286559073a99a376d5a4532f667d38a8c9191b0d"
     end
     on_arm do
-      url "https://github.com/louislef299/aws-sso/releases/download/v1.5.1/aws-sso_1.5.1_Darwin_arm64.tar.gz"
-      sha256 "fcc2c6d2a486560470d487818419fa92fd0f99b5cc73fad938fdc6466b600f17"
+      url "https://github.com/louislef299/aws-sso/releases/download/v1.5.4/aws-sso_1.5.4_Darwin_arm64.tar.gz"
+      sha256 "00579796dfe5aa47aeff9ce2c0809471d3892835e31147c424e1fd11e489f220"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/louislef299/aws-sso/releases/download/v1.5.1/aws-sso_1.5.1_Linux_x86_64.tar.gz"
-      sha256 "b531cd22153b2518f506f00968fa48cd0ce823c88d1986c53a39675b7708ddd8"
+      url "https://github.com/louislef299/aws-sso/releases/download/v1.5.4/aws-sso_1.5.4_Linux_x86_64.tar.gz"
+      sha256 "ae3c73bca0808ec04589cc37be23234b134d16f94c332ec42f40f25eb8816387"
     end
     on_arm do
-      url "https://github.com/louislef299/aws-sso/releases/download/v1.5.1/aws-sso_1.5.1_Linux_arm64.tar.gz"
-      sha256 "a5b14642f6db1a27199ac28ab440e4eb2c759b0b2eba5d0fb401ab88484ec4be"
+      url "https://github.com/louislef299/aws-sso/releases/download/v1.5.4/aws-sso_1.5.4_Linux_arm64.tar.gz"
+      sha256 "f2a0ebf6965806b80917a281de2458e710a7e7ef8081ef982b08ff3007e80c3e"
+    end
+  end
+
+  postflight do
+    if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
+      system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/aws-sso"]
     end
   end
 
