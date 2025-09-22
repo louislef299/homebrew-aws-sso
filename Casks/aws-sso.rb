@@ -3,7 +3,7 @@ cask "aws-sso" do
   name "aws-sso"
   desc ""
   homepage "https://github.com/louislef299/aws-sso"
-  version "1.6.6"
+  version "1.6.7"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "aws-sso" do
   on_macos do
     on_intel do
       url "https://github.com/louislef299/aws-sso/releases/download/v#{version}/aws-sso_#{version}_Darwin_x86_64.tar.gz"
-      sha256 "20c3b4a126f3ab365100937823241e3be90da2b701d320bb4554de4690c4b120"
+      sha256 "30f497b0ae10bd4ba219a24ea1712ba1f049f062d4d0827357bea7ee0a8f947a"
     end
     on_arm do
       url "https://github.com/louislef299/aws-sso/releases/download/v#{version}/aws-sso_#{version}_Darwin_arm64.tar.gz"
-      sha256 "44ae3e12228a5979d9bfa9666eecf65f1fde85584ea271486149068ade36230e"
+      sha256 "840c9c2a5a6eb1cb95296fd7a4fb282382ed673fd5d3babb00f72ce0602ad7f2"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/louislef299/aws-sso/releases/download/v#{version}/aws-sso_#{version}_Linux_x86_64.tar.gz"
-      sha256 "891fa27a37f711e2e476ba683964f446df3dd5028a4285b7a07e8d513dba5a93"
+      sha256 "d9383105ebbe45176d120a6898c3006edc08256284518ce7017740fe277016fb"
     end
     on_arm do
       url "https://github.com/louislef299/aws-sso/releases/download/v#{version}/aws-sso_#{version}_Linux_arm64.tar.gz"
-      sha256 "c0d55d373d2cff193e7947332032a68c7bfcdb88887831c0d7e3cf4a8146d328"
+      sha256 "074ab35a7d0634735e995923e7d1261601f711ab64324d3dc6e4d9202b3fdf62"
     end
   end
 
