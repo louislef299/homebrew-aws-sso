@@ -17,22 +17,22 @@ cask "aws-sso" do
   on_macos do
     on_intel do
       url "https://github.com/louislef299/aws-sso/releases/download/v#{version}/aws-sso_#{version}_darwin_amd64.tar.gz"
-      sha256 "c4ba46c711dfc227e582489a786803313ffaf62c23e83d215878bd7c3f868636"
+      sha256 "354e69a01dae8d4a6b5ce8e453dba7bdc82ee3a7eef618d9853fd93877df57f3"
     end
     on_arm do
       url "https://github.com/louislef299/aws-sso/releases/download/v#{version}/aws-sso_#{version}_darwin_arm64.tar.gz"
-      sha256 "13b5a68461a1a76ee8087f895fbd2025eef2593a0450c9455174d11ed4536e4e"
+      sha256 "8190e464a0a18fec32fce9ef3e3ae908d7f3d6818199ca627701653f1f45e386"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/louislef299/aws-sso/releases/download/v#{version}/aws-sso_#{version}_linux_amd64.tar.gz"
-      sha256 "e763809ffab38cf693284f2aa228da2ef503c4ee4dd04c960e084f242cfee5ac"
+      sha256 "62baf547bdd901033a4bdfd513c50927b36533eebee5108b0349b09824e394eb"
     end
     on_arm do
       url "https://github.com/louislef299/aws-sso/releases/download/v#{version}/aws-sso_#{version}_linux_arm64.tar.gz"
-      sha256 "1c5ed9b914b113e760c76a8111748ec0789cde14c621c7a4f3131ece11bd2a9c"
+      sha256 "dc24b3f8e8447489c2b7eb09dd2a25c788b2ec51e4bf80225c0a9a5b9956e1b9"
     end
   end
 
@@ -40,7 +40,7 @@ cask "aws-sso" do
     if system_command("/usr/bin/xattr", args: ["-h"]).exit_status == 0
       system_command "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "#{staged_path}/aws-sso"]
     end
-    gpg --verify #{staged_path}/aws-sso*.sig #{staged_path}/aws-sso
+    system_command("gpg", args: "--verify" "#{staged_path}/aws-sso*.sig", "#{staged_path}/aws-sso")
   end
 
   # No zap stanza required
