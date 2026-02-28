@@ -3,7 +3,7 @@ cask "aws-sso" do
   name "aws-sso"
   desc "Thanks for installing aws-sso! You can get configured by going to https://aws-sso.netlify.app. The binary you have installed came with a binary signature if you would like to verify the install. More information can be found on the website"
   homepage "https://github.com/louislef299/aws-sso"
-  version "1.6.21"
+  version "1.6.22"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "aws-sso" do
   on_macos do
     on_intel do
       url "https://github.com/louislef299/aws-sso/releases/download/v#{version}/aws-sso_#{version}_darwin_amd64.tar.gz"
-      sha256 "6e1e091af4f00ac4600e03b78c0abb56f55ae9c8d033f773b8bead4b1289e386"
+      sha256 "8801fb887520f31942d5232379f511dfc380a26551e84d9faa1e7ab084fdf8b5"
     end
     on_arm do
       url "https://github.com/louislef299/aws-sso/releases/download/v#{version}/aws-sso_#{version}_darwin_arm64.tar.gz"
-      sha256 "8548cc138964caad423f17927c2305c4647bec4f29128a9c5ca518d2ab7d1ff7"
+      sha256 "02c45f8e55aaa7cf6cac1c081aa59c8f3d6e05bf27a25ff94833a0649e81577f"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/louislef299/aws-sso/releases/download/v#{version}/aws-sso_#{version}_linux_amd64.tar.gz"
-      sha256 "2410d15f3c93b834cb170dcddde6b25ecb251e5df28b0664d97dd2dee9e88b42"
+      sha256 "802d0d233e9556d6fe6abcdd3a6ba97f9835edea3178738201ad3d4a3a281b2b"
     end
     on_arm do
       url "https://github.com/louislef299/aws-sso/releases/download/v#{version}/aws-sso_#{version}_linux_arm64.tar.gz"
-      sha256 "0acded254861560a2bb597cf3efee0143f64f09ff94f6ec01b08a59d35bfa4f8"
+      sha256 "dca11e288b88aa59ad4fc6fb67e89c575b15e3dd932ff459e955e98b436f1287"
     end
   end
 
